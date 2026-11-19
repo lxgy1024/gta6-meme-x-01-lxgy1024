@@ -1,8 +1,8 @@
 # gta6-meme-x-01
 
-[![make.fun](https://make.fun/badge/competition/gta6-meme-x-01)](https://make.fun/bounty/gta6-meme-x-01)
-[![make.fun](https://make.fun/badge/entrant/lxgy1024)](https://make.fun/u/lxgy1024)
-[![make.fun](https://make.fun/badge/referral/s7zff8f6)](https://make.fun/r/s7zff8f6)
+[![make.fun · gta6-meme-x-01](https://make.fun/badge/gta6-meme-x-01.svg)](https://make.fun/bounty/gta6-meme-x-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
+[![rank](https://make.fun/badge/gta6-meme-x-01/lxgy1024/gta6-meme-x-01-lxgy1024/rank.svg)](https://make.fun/bounty/gta6-meme-x-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
+[![reward](https://make.fun/badge/gta6-meme-x-01/lxgy1024/gta6-meme-x-01-lxgy1024/reward.svg)](https://make.fun/bounty/gta6-meme-x-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
 
 A GTA 6 meme for the make.fun bounty "Post a GTA 6 meme on X", $500 shared by the top 50 posts. An AI judge compares the posts two at a time; the post itself is the entry.
 
