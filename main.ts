@@ -10,7 +10,7 @@
 // /bot and /output:
 //   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync, mkdirSync } from "node:fs";
+import { copyFileSync, mkdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 const botDir = process.env.MAKEFUN_BOT_DIR ?? "/bot";
@@ -20,6 +20,25 @@ mkdirSync(outDir, { recursive: true });
 
 const source = join(botDir, "POST.json");
 const target = join(outDir, "POST.json");
+
+// Validate POST.json before copying: it must parse as JSON and name the
+// post's address in a url field. The copy itself stays byte-for-byte.
+let parsed: unknown;
+try {
+  parsed = JSON.parse(readFileSync(source, "utf8"));
+} catch (error) {
+  console.error(`POST.json at ${source} is not valid JSON: ${(error as Error).message}`);
+  process.exit(1);
+}
+if (
+  typeof parsed !== "object" ||
+  parsed === null ||
+  typeof (parsed as { url?: unknown }).url !== "string" ||
+  ((parsed as { url: string }).url ?? "").trim() === ""
+) {
+  console.error(`POST.json at ${source} must be a JSON object with a non-empty string "url" field`);
+  process.exit(1);
+}
 
 try {
   copyFileSync(source, target);
